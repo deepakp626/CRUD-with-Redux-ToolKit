@@ -1,0 +1,39 @@
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true);
+    console.log(isOpen)
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+
+  how to search index of a object in javascript array
+
+  To search for the index of an object in a JavaScript array, you can use the findIndex() method or a for loop with conditional statements. Here are examples using both methods:
+
+  Method 1: Using findIndex()
+  const myArray = [{id: 1, name: 'Alice'}, {id: 2, name: 'Bob'}, {id: 3, name: 'Charlie'}];
+
+  const searchObject = {id: 2, name: 'Bob'};
+  
+  const index = myArray.findIndex(obj => obj.id === searchObject.id && obj.name === searchObject.name);
+  
+  console.log(index); // Output: 1
+  Method 2: Using for loop with conditional statements
+  
+  const myArray = [{id: 1, name: 'Alice'}, {id: 2, name: 'Bob'}, {id: 3, name: 'Charlie'}];
+  
+const searchObject = {id: 2, name: 'Bob'};
+
+let index = -1;
+for (let i = 0; i < myArray.length; i++) {
+  if (myArray[i].id === searchObject.id && myArray[i].name === searchObject.name) {
+    index = i;
+    break;
+  }
+}
+
+console.log(index); // Output: 1
